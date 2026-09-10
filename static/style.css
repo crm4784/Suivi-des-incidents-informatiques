@@ -53,3 +53,28 @@ footer {
     background-color: #004458;
     color: white;
 }
+/* Style simple pour la page de détail */
+.detail-ticket {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.detail-ticket p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.btn-retour {
+    display: inline-block;
+    margin-top: 10px;
+    color: #004458;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-retour:hover {
+    text-decoration: underline;
+}

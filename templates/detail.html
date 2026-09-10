@@ -1,35 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Détail{% endblock %}
+{% block title %}Détail du ticket{% endblock %}
 
 {% block content %}
 
-<h2>{{ element.reference }}</h2>
+<h2>ID du ticket : {{ element.id }}</h2>
 
-<div class="detail">
-
-    <p>
-        {{ element.titre }}
-    </p>
-
-    <p>
-        <strong>origine :</strong>
-        {{ element. origine}}<br>
-                <strong>gravite :</strong>
-        {{ element. gravite}}<br>
-                <strong>traitement :</strong>
-        {{ element.traitement}}<br>
-                <strong>demandeur :</strong>
-        {{ element.demandeur}}<br>
-                <strong>symptome :</strong>
-        {{ element.symptome}};
-        
-    </p>
-
+<div class="detail-ticket">
+    <p><strong>Numéro de ticket :</strong> {{ element.numeroTicket }}</p>
+    <p><strong>Symptôme :</strong> {{ element.symptome }}</p>
+    <p><strong>Demandeur :</strong> {{ element.demandeur }}</p>
+    <p><strong>Origine :</strong> {{ element.origine }}</p>
+    <p><strong>Gravité :</strong> {{ element.gravite }}</p>
+    <p><strong>Statut du traitement :</strong> {{ element.traitement }}</p>
 </div>
 
-<a href="{{ url_for('index') }}">
-    ← Retour à la liste
-</a>
+<br>
+<a href="{{ url_for('index') }}" class="btn-retour">← Retour à la liste</a>
 
 {% endblock %}
