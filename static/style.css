@@ -1,77 +1,155 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
 }
 
 header {
     background-color: #004458;
     color: white;
-    padding: 20px;
+    padding: 24px 20px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 nav a {
-    color: white;
+    color: #e2e8f0;
     text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 main {
     max-width: 1000px;
-    margin: 30px auto;
+    margin: 35px auto;
     padding: 0 20px;
 }
+
+main h2 {
+    color: #004458;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+main > p {
+    color: #64748b;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+.compteur {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 30px;
+    display: inline-block;
+    min-width: 220px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.compteur strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.compteur p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
 
 .liste {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
-.carte,
-.detail {
-    background-color: white;
-    padding: 20px;
+.carte {
+    background-color: #ffffff;
+    padding: 22px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #004458;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+}
+
+.carte h3 {
+    margin: 0 0 10px 0;
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carte p {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #004458;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f8fafc;
 }
 
 .carte a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #2563eb;
+    display: block;
+    text-align: center;
+    padding: 9px 12px;
+    background-color: #004458;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    background-color: #004458;
-    color: white;
-}
-/* Style simple pour la page de détail */
+
+.detail,
 .detail-ticket {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .detail-ticket p {
-    margin: 10px 0;
-    font-size: 1rem;
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #334155;
 }
 
 .btn-retour {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     color: #004458;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
@@ -79,14 +157,12 @@ footer {
     text-decoration: underline;
 }
 
-.compteur {
-    background-color: white;
+
+footer {
+    margin-top: 60px;
     padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    display: inline-block;
-    color: #2563eb;
-
+    text-align: center;
+    background-color: #004458;
+    color: #e2e8f0;
+    font-size: 0.9rem;
 }
-

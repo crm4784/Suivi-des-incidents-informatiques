@@ -4,6 +4,13 @@
 
 {% block content %}
 
+<!--donnée pour le compteur de ticket*/-->
+
+{% set total = donnees|length %}
+{% set en_cours = donnees | selectattr("statut", "equalto", "En cours") | list | length %}
+{% set resolu = donnees | selectattr("statut", "equalto", "Résolu") | list | length %}
+{% set attente = donnees | selectattr("statut", "equalto", "En attente") | list | length %}
+
 <h2>Liste des éléments</h2>
 
 <p>
@@ -12,13 +19,27 @@
 </p>
 
 <div class="compteur">
-    <strong>Compteur de ticket</strong>
-    <p>Total : {{ donnees|length }}</p>
-    <p>En cours : {{ donnees | selectattr("statut", "equalto", "En cours") | list | length }}</p>
-    <p>Résolu : {{ donnees | selectattr("statut", "equalto", "Résolu") | list | length }}</p>
+    <h3>Compteur des tickets</h3>
 
-</div> 
+    <div class="stat total">
+        <span>Total des tickets</span>
+        <strong>{{ total }}</strong> 
+    </div>
+    <div class="stat encours">
+        <span>En cours</span>
+        <strong>{{ en_cours }}</strong>
+    </div>
 
+    <div class="stat resolu">
+        <span>Résolus</span>
+        <strong>{{ resolu }}</strong>
+    </div>
+
+    <div class="stat attente">
+        <span>En attente</span>
+        <strong>{{ attente }}</strong>
+    </div>
+    <!--Calcul trouvé sur microsoft fabric community-->
 <div class="liste">
 
     {% for element in donnees %}
