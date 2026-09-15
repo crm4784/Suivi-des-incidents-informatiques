@@ -16,38 +16,46 @@
 </p>
 
 <div class="compteur">
-
-    <div class="compteur-stat">
-        <span>Total</span>
-        <h2>{{ total }}</h2>
+    <span class="compteur-titre"><strong>Compteur de tickets</strong></span>
+    
+    <div class="compteur-stats-container">
+        <div class="compteur-stat">
+            <span>Total</span>
+              <hr>
+            <h2>{{ total }}</h2>
+        </div>
+        
+        <div class="compteur-stat">
+            <span>En cours</span>
+              <hr>
+            <h2>{{ en_cours }}</h2>
+        </div>
+        
+        <div class="compteur-stat">
+       
+            <span>Résolus</span>
+              <hr>
+            <h2>{{ resolu }}</h2>
+               
+        </div>
+        
+        <div class="compteur-stat">
+            <span>En attente</span>
+              <hr>
+            <h2>{{ attente }}</h2>
+        </div>
     </div>
-
-    <div class="compteur-stat">
-        <span>En cours</span>
-        <h2>{{ en_cours }}</h2>
-    </div>
-
-    <div class="compteur-stat">
-        <span>Résolus</span>
-        <h2>{{ resolu }}</h2>
-    </div>
-
-    <div class="compteur-stat">
-        <span>En attente</span>
-        <h2>{{ attente }}</h2>
-    </div>
-
-</div>
 
     {% if total > 0 %}
     <hr>
-    <p><strong>Taux de résolution :</strong>
-        {{ ((resolu / total) * 100) | round(1) }} %
+    <p class="compteur-taux">
+        <strong>Taux de résolution :</strong> {{ ((resolu / total) * 100) | round(1) }} %
     </p>
     {% endif %}
 </div>
 
 <!-- FORMULAIRE DE FILTRAGE (GRAVITÉ, TRAITEMENT, ORIGINE) -->
+
 <div class="bloc-filtres">
     <h3>Filtrer les tickets</h3>
     <form method="GET" action="{{ url_for('index') }}" class="form-filtres">
@@ -91,7 +99,7 @@
         </div>
     </form>
 </div>
-
+     <h2><strong>Tickets</strong><h2>
 <!-- LISTE DES TICKETS -->
 <div class="liste">
     {% for element in donnees %}

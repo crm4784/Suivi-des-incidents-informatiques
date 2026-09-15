@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Base & Layout
-   ========================================================================== */
+/* Base & Layout */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,9 +59,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   Composants : Compteur & Filtres
-   ========================================================================== */
+/*Compteur & Filtres */
 
 .compteur,
 .detail-compteur {
@@ -75,10 +71,46 @@ footer {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.detail-compteur p {
-    margin: 12px 0;
+/* Titre du bloc */
+.compteur-titre {
+    font-size: 1.1rem;
+    color: #1e293b;
+}
+
+/* Conteneur pour aligner les stats côte à côte */
+.compteur-stats-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Style de chaque stat individuelle */
+.compteur-stat {
+    text-align: left; /* Centre le texte à l'intérieur de chaque stat */
+    flex: 1;
+    padding-bottom: 0;
+
+}
+
+.compteur-stat span {
+    font-size: 0.85rem;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.compteur-stat h2 {
+    font-size: 1.5rem;
+    color: #0f172a;
+        padding-bottom: 0;
+
+}
+
+/* Texte du taux de résolution */
+.compteur-taux {
+    margin-top: 2px;
     font-size: 0.95rem;
     color: #334155;
+    text-align: center;
 }
 
 .bloc-filtres {
@@ -86,7 +118,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .bloc-filtres h3 {
@@ -157,9 +189,7 @@ footer {
     background-color: #cbd5e1;
 }
 
-/* ==========================================================================
-   Grille & Cartes de Tickets
-   ========================================================================== */
+/* Grille & Cartes de Tickets */
 
 .liste {
     display: grid;
@@ -221,9 +251,7 @@ footer {
     background-color: #002d3b;
 }
 
-/* ==========================================================================
-   Page de Détail
-   ========================================================================== */
+/* Page de Détail */
 
 .detail,
 .detail-ticket {
@@ -254,9 +282,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   Badges & Code Couleur de Gravité
-   ========================================================================== */
+/* Badges & Code Couleur de Gravité */
 
 /* Structure du badge discret */
 .badge-gravite {
@@ -299,7 +325,9 @@ footer {
     color: #ffffff;
 }
 
-/* Ajustement des bordures supérieures selon la gravité (sans changer le fond de carte) */
+/* Ajustement des bordures supérieures selon la gravité (sans changer le fond de carte)
+!important sert à forcer l'application d'une règle en écrasant toutes les autres, peu importe la priorité
+*/
 .carte.gravite-critique,
 .carte.gravite-critique,
 .detail-ticket.gravite-critique {
