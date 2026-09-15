@@ -89,7 +89,8 @@ Planning : fais sur le gaant
 
 ## sauvegarde total du projet
 J'ai des probeleme avec les push pour envoyer tous sur le depot github udu projet donc j'ai creer une nouvelle branch pour une sauvegarde total du projet 
-
+## probleme rencontrés 
+Je n'ai pas pu mettre sur le main avec git merge car sa me crée des conflit donc j'ai tous envoyer sur la branch feature-filtres-incidents
 
 
 ## Bilan
