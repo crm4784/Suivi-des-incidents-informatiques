@@ -87,6 +87,10 @@ GitHub Project & Kanban : Organisation du travail sous forme de colonnes (To Do,
 Planning : fais sur le gaant
 
 
+## sauvegarde total du projet
+J'ai des probeleme avec les push pour envoyer tous sur le depot github udu projet donc j'ai creer une nouvelle branch pour une sauvegarde total du projet 
+
+
 
 ## Bilan
 

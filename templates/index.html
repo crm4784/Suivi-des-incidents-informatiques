@@ -113,8 +113,8 @@
                 {{ element.gravite }}
             </span>
         </div>
-
-        <p>{{ element.numeroTicket }}</p>
+                <span>numero de ticket : </span>
+                <p>{{ element.numeroTicket }}</p>
         <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
     </article>
     {% else %}
