@@ -43,40 +43,29 @@ main h2 {
     font-size: 1.4rem;
 }
 
-main > p {
+main p {
     color: #64748b;
     margin-top: 0;
     margin-bottom: 25px;
 }
 
+/* Compteur */
 
-.compteur {
+.compteur,
+.detail-compteur {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid #2563eb;
-    margin-bottom: 30px;
-    display: inline-block;
-    min-width: 220px;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.compteur strong {
-    display: block;
+.detail-compteur p {
+    margin: 12px 0;
     font-size: 0.95rem;
-    color: #1e293b;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
 }
-
-.compteur p {
-    margin: 6px 0;
-    font-size: 0.9rem;
-    color: #475569;
-}
-
 
 .liste {
     display: grid;
@@ -165,4 +154,82 @@ footer {
     background-color: #004458;
     color: #e2e8f0;
     font-size: 0.9rem;
+}
+
+
+
+.bloc-filtres {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.bloc-filtres h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #004458;
+    font-size: 1.1rem;
+}
+
+.form-filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.groupe-filtre {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.groupe-filtre label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.groupe-filtre select {
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+.actions-filtres {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-filtrer {
+    background-color: #004458;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-filtrer:hover {
+    background-color: #002d3b;
+}
+
+.btn-reinitialiser {
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 9px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-reinitialiser:hover {
+    background-color: #cbd5e1;
 }

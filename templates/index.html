@@ -4,60 +4,105 @@
 
 {% block content %}
 
-<!--donnée pour le compteur de ticket*/-->
-
 {% set total = donnees|length %}
-{% set en_cours = donnees | selectattr("statut", "equalto", "En cours") | list | length %}
-{% set resolu = donnees | selectattr("statut", "equalto", "Résolu") | list | length %}
-{% set attente = donnees | selectattr("statut", "equalto", "En attente") | list | length %}
+{% set en_cours = donnees | selectattr("traitement", "equalto", "En investigation") | list | length %}
+{% set resolu = donnees | selectattr("traitement", "equalto", "Résolu") | list | length %}
+{% set attente = donnees | selectattr("traitement", "equalto", "Nouveau") | list | length %}
 
 <h2>Liste des éléments</h2>
 
 <p>
-    Cette page présente les informations disponibles
-    dans l'application.
+    Cette page présente les informations disponibles dans l'application.
 </p>
 
 <div class="compteur">
-    <h3>Compteur des tickets</h3>
 
-    <div class="stat total">
-        <span>Total des tickets</span>
-        <strong>{{ total }}</strong> 
+    <div class="compteur-stat">
+        <span>Total</span>
+        <h2>{{ total }}</h2>
     </div>
-    <div class="stat encours">
+
+    <div class="compteur-stat">
         <span>En cours</span>
-        <strong>{{ en_cours }}</strong>
+        <h2>{{ en_cours }}</h2>
     </div>
 
-    <div class="stat resolu">
+    <div class="compteur-stat">
         <span>Résolus</span>
-        <strong>{{ resolu }}</strong>
+        <h2>{{ resolu }}</h2>
     </div>
 
-    <div class="stat attente">
+    <div class="compteur-stat">
         <span>En attente</span>
-        <strong>{{ attente }}</strong>
+        <h2>{{ attente }}</h2>
     </div>
-    <!--Calcul trouvé sur microsoft fabric community-->
+
+</div>
+
+    {% if total > 0 %}
+    <hr>
+    <p><strong>Taux de résolution :</strong>
+        {{ ((resolu / total) * 100) | round(1) }} %
+    </p>
+    {% endif %}
+</div>
+
+<!-- FORMULAIRE DE FILTRAGE (GRAVITÉ, TRAITEMENT, ORIGINE) -->
+<div class="bloc-filtres">
+    <h3>Filtrer les tickets</h3>
+    <form method="GET" action="{{ url_for('index') }}" class="form-filtres">
+        
+        <!-- Filtre Gravité -->
+        <div class="groupe-filtre">
+            <label for="gravite">Gravité :</label>
+            <select name="gravite" id="gravite">
+                <option value="">-- Toutes --</option>
+                {% for g in liste_gravites %}
+                    <option value="{{ g }}" {% if filtres_actifs.gravite == g %}selected{% endif %}>{{ g }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Filtre Statut du traitement -->
+        <div class="groupe-filtre">
+            <label for="traitement">Traitement :</label>
+            <select name="traitement" id="traitement">
+                <option value="">-- Tous --</option>
+                {% for t in liste_traitements %}
+                    <option value="{{ t }}" {% if filtres_actifs.traitement == t %}selected{% endif %}>{{ t }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Filtre Origine -->
+        <div class="groupe-filtre">
+            <label for="origine">Origine :</label>
+            <select name="origine" id="origine">
+                <option value="">-- Toutes --</option>
+                {% for o in liste_origines %}
+                    <option value="{{ o }}" {% if filtres_actifs.origine == o %}selected{% endif %}>{{ o }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="actions-filtres">
+            <button type="submit" class="btn-filtrer">Filtrer</button>
+            <a href="{{ url_for('index') }}" class="btn-reinitialiser">Réinitialiser</a>
+        </div>
+    </form>
+</div>
+
+<!-- LISTE DES TICKETS -->
 <div class="liste">
-
     {% for element in donnees %}
-
     <article class="carte">
-
-        <h3>{{ element.id }}</h3>
-
+        <h3>ID : {{ element.id }}</h3>
         <p>{{ element.numeroTicket }}</p>
-
-        <a href="{{ url_for('detail', id=element.id) }}">
-            Voir le détail
-        </a>
-
+        <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
     </article>
-
+    {% else %}
+        <p>Aucun ticket ne correspond à vos critères de recherche.</p>
     {% endfor %}
-
 </div>
 
 {% endblock %}
