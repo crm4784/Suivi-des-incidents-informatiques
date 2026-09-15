@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Base & Layout
+   ========================================================================== */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,7 +12,7 @@ body {
 
 header {
     background-color: #004458;
-    color: white;
+    color: #ffffff;
     padding: 24px 20px;
 }
 
@@ -49,7 +52,18 @@ main p {
     margin-bottom: 25px;
 }
 
-/* Compteur */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    background-color: #004458;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Composants : Compteur & Filtres
+   ========================================================================== */
 
 .compteur,
 .detail-compteur {
@@ -66,97 +80,6 @@ main p {
     font-size: 0.95rem;
     color: #334155;
 }
-
-.liste {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.carte {
-    background-color: #ffffff;
-    padding: 22px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    border-top: 4px solid #004458;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 150px;
-}
-
-.carte h3 {
-    margin: 0 0 10px 0;
-    font-size: 0.8rem;
-    color: #64748b;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.carte p {
-    margin: 0 0 20px 0;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #004458;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f8fafc;
-}
-
-.carte a {
-    display: block;
-    text-align: center;
-    padding: 9px 12px;
-    background-color: #004458;
-    color: #ffffff;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-
-.detail,
-.detail-ticket {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 24px;
-    margin-top: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-.detail-ticket p {
-    margin: 12px 0;
-    font-size: 0.95rem;
-    color: #334155;
-}
-
-.btn-retour {
-    display: inline-block;
-    margin-top: 15px;
-    color: #004458;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-
-.btn-retour:hover {
-    text-decoration: underline;
-}
-
-
-footer {
-    margin-top: 60px;
-    padding: 20px;
-    text-align: center;
-    background-color: #004458;
-    color: #e2e8f0;
-    font-size: 0.9rem;
-}
-
-
 
 .bloc-filtres {
     background-color: #ffffff;
@@ -199,7 +122,7 @@ footer {
     border: 1px solid #cbd5e1;
     border-radius: 5px;
     font-size: 0.9rem;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .actions-filtres {
@@ -209,7 +132,7 @@ footer {
 
 .btn-filtrer {
     background-color: #004458;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 9px 16px;
     border-radius: 5px;
@@ -234,7 +157,172 @@ footer {
     background-color: #cbd5e1;
 }
 
-.test{
-    color:blue; 
+/* ==========================================================================
+   Grille & Cartes de Tickets
+   ========================================================================== */
 
+.liste {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.carte {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #004458; /* Couleur par défaut */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+}
+
+.carte-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.carte h3 {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carte p {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #004458;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.carte a {
+    display: block;
+    text-align: center;
+    padding: 9px 12px;
+    background-color: #004458;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.carte a:hover {
+    background-color: #002d3b;
+}
+
+/* ==========================================================================
+   Page de Détail
+   ========================================================================== */
+
+.detail,
+.detail-ticket {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.detail-ticket p {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.btn-retour {
+    display: inline-block;
+    margin-top: 15px;
+    color: #004458;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn-retour:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Badges & Code Couleur de Gravité
+   ========================================================================== */
+
+/* Structure du badge discret */
+.badge-gravite {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+/* Couleurs des badges */
+.badge-gravite.critique,
+.badge-critique {
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+.badge-gravite.haute,
+.badge-gravite.majeure,
+.badge-haute,
+.badge-majeure {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.badge-gravite.moyenne,
+.badge-gravite.moyen,
+.badge-moyenne,
+.badge-moyen {
+    background-color: #f1c40f;
+    color: #1e293b; /* Contraste sombre pour lisibilité sur fond jaune */
+}
+
+.badge-gravite.faible,
+.badge-gravite.mineure,
+.badge-faible,
+.badge-mineure {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+/* Ajustement des bordures supérieures selon la gravité (sans changer le fond de carte) */
+.carte.gravite-critique,
+.carte.gravite-critique,
+.detail-ticket.gravite-critique {
+    border-top: 4px solid #8b0000 !important;
+}
+
+.carte.gravite-haute,
+.carte.gravite-majeure,
+.detail-ticket.gravite-haute,
+.detail-ticket.gravite-majeure {
+    border-top: 4px solid #e67e22 !important;
+}
+
+.carte.gravite-moyenne,
+.carte.gravite-moyen,
+.detail-ticket.gravite-moyenne,
+.detail-ticket.gravite-moyen {
+    border-top: 4px solid #f1c40f !important;
+}
+
+.carte.gravite-faible,
+.carte.gravite-mineure,
+.detail-ticket.gravite-faible,
+.detail-ticket.gravite-mineure {
+    border-top: 4px solid #27ae60 !important;
 }

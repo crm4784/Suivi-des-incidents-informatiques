@@ -95,8 +95,17 @@
 <!-- LISTE DES TICKETS -->
 <div class="liste">
     {% for element in donnees %}
-    <article class="carte">
-        <h3>ID : {{ element.id }}</h3>
+    <!-- Ajout de la classe dynamique gravite-{{ element.gravite }} pour la bordure supérieure -->
+    <article class="carte gravite-{{ element.gravite|lower }}">
+        
+        <!-- En-tête de carte : ID à gauche, badge couleur gravité à droite -->
+        <div class="carte-header">
+            <h3>ID : {{ element.id }}</h3>
+            <span class="badge-gravite {{ element.gravite|lower }}">
+                {{ element.gravite }}
+            </span>
+        </div>
+
         <p>{{ element.numeroTicket }}</p>
         <a href="{{ url_for('detail', id=element.id) }}">Voir le détail</a>
     </article>

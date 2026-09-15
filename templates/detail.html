@@ -6,12 +6,20 @@
 
 <h2>ID du ticket : {{ element.id }}</h2>
 
-<div class="detail-ticket">
+<!-- Classe dynamique gravite-{{ element.gravite }} sur la boîte de détail -->
+<div class="detail-ticket gravite-{{ element.gravite|lower }}">
     <p><strong>Numéro de ticket :</strong> {{ element.numeroTicket }}</p>
     <p><strong>Symptôme :</strong> {{ element.symptome }}</p>
     <p><strong>Demandeur :</strong> {{ element.demandeur }}</p>
     <p><strong>Origine :</strong> {{ element.origine }}</p>
-    <p><strong>Gravité :</strong> {{ element.gravite }}</p>
+    
+    <!-- Badge couleur de la gravité dans la page de détail -->
+    <p><strong>Gravité :</strong> 
+        <span class="badge-gravite {{ element.gravite|lower }}">
+            {{ element.gravite }}
+        </span>
+    </p>
+
     <p><strong>Statut du traitement :</strong> {{ element.traitement }}</p>
 </div>
 
@@ -19,6 +27,3 @@
 <a href="{{ url_for('index') }}" class="btn-retour">← Retour à la liste</a>
 
 {% endblock %}
-
-
-
