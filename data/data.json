@@ -1,92 +1,92 @@
 [
     {
         "id": 1,
-        "designation": "Poste administratif A",
-        "constructeur": "Dell",
-        "famille": "Portable",
-        "etatParc": "Opérationnel",
-        "implantation": "Bâtiment A - 101",
-        "dateAcquisition": "2023-09-15"
+        "numeroTicket": "HD-2501",
+        "origine": "Poste utilisateur",
+        "gravite": "Majeure",
+        "traitement": "En investigation",
+        "demandeur": "Alice Martin",
+        "symptome": "Accès impossible au partage de fichiers"
     },
     {
         "id": 2,
-        "designation": "Poste comptabilité B",
-        "constructeur": "HP",
-        "famille": "Fixe",
-        "etatParc": "Révision",
-        "implantation": "Bâtiment A - 104",
-        "dateAcquisition": "2021-06-12"
+        "numeroTicket": "HD-2502",
+        "origine": "Messagerie",
+        "gravite": "Mineure",
+        "traitement": "Nouveau",
+        "demandeur": "Paul Durand",
+        "symptome": "Réception différée de certains messages"
     },
     {
         "id": 3,
-        "designation": "Imprimante accueil",
-        "constructeur": "Brother",
-        "famille": "Impression",
-        "etatParc": "Opérationnel",
-        "implantation": "Hall principal",
-        "dateAcquisition": "2022-03-20"
+        "numeroTicket": "HD-2503",
+        "origine": "Infrastructure réseau",
+        "gravite": "Critique",
+        "traitement": "Escaladé",
+        "demandeur": "Sophie Bernard",
+        "symptome": "Interruption complète de la connexion réseau"
     },
     {
         "id": 4,
-        "designation": "Serveur fichiers",
-        "constructeur": "HPE",
-        "famille": "Serveur",
-        "etatParc": "Opérationnel",
-        "implantation": "Salle informatique",
-        "dateAcquisition": "2020-11-05"
+        "numeroTicket": "HD-2504",
+        "origine": "Application métier",
+        "gravite": "Majeure",
+        "traitement": "En investigation",
+        "demandeur": "Marc Robert",
+        "symptome": "Fermeture inattendue du logiciel de gestion"
     },
     {
         "id": 5,
-        "designation": "Portable direction",
-        "constructeur": "Lenovo",
-        "famille": "Portable",
-        "etatParc": "Immobilisé",
-        "implantation": "Atelier technique",
-        "dateAcquisition": "2019-08-27"
+        "numeroTicket": "HD-2505",
+        "origine": "Impression",
+        "gravite": "Mineure",
+        "traitement": "Résolu",
+        "demandeur": "Julie Petit",
+        "symptome": "Document bloqué dans la file d'attente"
     },
     {
         "id": 6,
-        "designation": "Écran bureau 204",
-        "constructeur": "Samsung",
-        "famille": "Affichage",
-        "etatParc": "Opérationnel",
-        "implantation": "Bâtiment B - 204",
-        "dateAcquisition": "2024-01-18"
+        "numeroTicket": "HD-2506",
+        "origine": "Poste utilisateur",
+        "gravite": "Majeure",
+        "traitement": "Nouveau",
+        "demandeur": "Nicolas Faure",
+        "symptome": "Ordinateur très lent au démarrage"
     },
     {
         "id": 7,
-        "designation": "Poste commercial C",
-        "constructeur": "Acer",
-        "famille": "Portable",
-        "etatParc": "Opérationnel",
-        "implantation": "Bâtiment B - 207",
-        "dateAcquisition": "2023-04-11"
+        "numeroTicket": "HD-2507",
+        "origine": "Téléphonie",
+        "gravite": "Mineure",
+        "traitement": "Résolu",
+        "demandeur": "Claire Simon",
+        "symptome": "Absence de tonalité sur un poste"
     },
     {
         "id": 8,
-        "designation": "Imprimante service RH",
-        "constructeur": "Canon",
-        "famille": "Impression",
-        "etatParc": "Révision",
-        "implantation": "Bâtiment A - 110",
-        "dateAcquisition": "2021-10-09"
+        "numeroTicket": "HD-2508",
+        "origine": "Infrastructure réseau",
+        "gravite": "Critique",
+        "traitement": "En investigation",
+        "demandeur": "Thomas Leroy",
+        "symptome": "Serveur inaccessible depuis plusieurs services"
     },
     {
         "id": 9,
-        "designation": "Serveur sauvegarde",
-        "constructeur": "Lenovo",
-        "famille": "Serveur",
-        "etatParc": "Opérationnel",
-        "implantation": "Salle informatique",
-        "dateAcquisition": "2022-12-02"
+        "numeroTicket": "HD-2509",
+        "origine": "Application métier",
+        "gravite": "Mineure",
+        "traitement": "Nouveau",
+        "demandeur": "Émilie Robert",
+        "symptome": "Affichage incorrect d'un formulaire"
     },
     {
         "id": 10,
-        "designation": "Écran accueil",
-        "constructeur": "LG",
-        "famille": "Affichage",
-        "etatParc": "Immobilisé",
-        "implantation": "Hall principal",
-        "dateAcquisition": "2018-05-16"
+        "numeroTicket": "HD-2510",
+        "origine": "Authentification",
+        "gravite": "Majeure",
+        "traitement": "Résolu",
+        "demandeur": "Julien Moreau",
+        "symptome": "Impossible de se connecter au portail interne"
     }
 ]

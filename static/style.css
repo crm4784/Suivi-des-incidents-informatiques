@@ -78,3 +78,15 @@ footer {
 .btn-retour:hover {
     text-decoration: underline;
 }
+
+.compteur {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #2563eb;
+
+}
+

@@ -11,6 +11,14 @@
     dans l'application.
 </p>
 
+<div class="compteur">
+    <strong>Compteur de ticket</strong>
+    <p>Total : {{ donnees|length }}</p>
+    <p>En cours : {{ donnees | selectattr("statut", "equalto", "En cours") | list | length }}</p>
+    <p>Résolu : {{ donnees | selectattr("statut", "equalto", "Résolu") | list | length }}</p>
+
+</div> 
+
 <div class="liste">
 
     {% for element in donnees %}
